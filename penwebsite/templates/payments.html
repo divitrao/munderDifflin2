@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+Payments  <h1>{{system}}</h1>
+cost <h1>{{system1}}</h1>
+<form method="post" action="payments">
+    {% csrf_token %}
+    <input type="submit" placeholder="submit">
+    <input type="email" name="to_email" placeholder="enter your mail here">
+    <input type="text" name="text_boxes" placeholder="enter your message here">
+</form>
+</body>
+</html>

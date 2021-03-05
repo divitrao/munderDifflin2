@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
+{% load static %}
+<html lang="en">
+<!--<link href="{% static 'home.css' %}" rel="stylesheet" type="text/css">-->
+<link href="{% static 'home4.css' %}" rel="stylesheet" type="text/css">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .abt_us{
+        background-image: url('{% static "image\pen1.jpg" %}');
+        background-size: cover;
+        
+    }
+    /* #metal{
+        
+        background-image: url('{% static "image\metals.jpg" %}');
+        background-size: cover;
+        opacity: 0.75;
+        
+        } */
+
+        #metal::before {    
+      content: "";
+      background-image: url('{% static "image\metals.jpg" %}');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.75;
+}
+
+#plastic::before {    
+      content: "";
+      background-image: url('{% static "image\plastic.jpeg" %}');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.5;
+}
+
+#ink::before {    
+      content: "";
+      background-image: url('{% static "image\ink.jpg" %}');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.75;
+}
+
+
+
+/* #plastic{
+
+    background-image: url('{% static "image\plastic.jpeg" %}');
+    background-size: cover;
+
+} */
+</style>
+<body>
+
+<div class="header">
+    penDev Inc
+</div>
+
+<div class="abt_us">
+    
+    <div id="about_us">
+        About Us
+    </div>
+    <div id="info">
+        
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+         when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          It has survived not only five centuries, but also the leap into electronic typesetting, 
+          remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+          containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+           including versions of Lorem Ipsum.A dip pen (or nib pen) consists of a metal nib with capillary channels, 
+           like that of a fountain pen, mounted on a handle or holder, often made of wood. A dip pen usually has no ink 
+           reservoir and must be repeatedly recharged with ink while drawing or writing. The dip pen has certain advantages
+            over a fountain pen. It can use waterproof pigmented (particle-and-binder-based) inks, such as so-called India ink, 
+            drawing ink, or acrylic inks, which would destroy a fountain pen by clogging, as well as the traditional iron gall ink,
+             which can cause corrosion in a fountain pen. Dip pens are now mainly used in illustration, calligraphy, and comics.
+              A particularly fine-pointed type of dip pen known as a crowquill is a favorite instrument of artists, such as David 
+              Stone Martin and Jay Lynch, because its flexible metal point can create a variety of delicate lines, textures and tones
+               with slight pressures while drawing.
+    </div>
+    
+</div>
+<div class="product-info">
+    <div id="metal">
+        <div id="about_metal">
+            About Our Metal Quality
+        </div>
+        <p id="metal-info">
+        Stainless steel is a corrosion-resistant alloy of iron, chromium and, in some cases, nickel and other metals.
+        Completely and infinitely recyclable, stainless steel is the “green material” par excellence. In fact,
+        within the construction sector, its actual recovery rate is close to 100%. Stainless steel is also environmentally
+         neutral and inert, and its longevity ensures it meets the needs of sustainable construction. Furthermore,
+          it does not leach compounds that could modify its composition when in contact with elements like water.
+
+        In addition to these environmental benefits, stainless steel is also aesthetically appealing, extremely hygienic,
+         easy to maintain, highly durable and offers a wide variety of aspects. As a result, stainless steel can be found
+          in many everyday objects. It also plays a prominent role in an array of industries, including energy, transportation,
+           building, research, medicine, food and logistics. 
+           </p>
+    </div>
+    <div id="plastic">
+        <div id="about_plastic">
+            About Our Plastics
+        </div>
+        <p id="plastic-info">
+            Plastics are a wide range of synthetic or semi-synthetic materials, that use polymers as a main ingredient.
+             The plasticity during production makes it possible for plastic to be moulded, extruded or pressed into solid 
+             objects of various shapes, making it an adaptable material for many different uses. This adaptability, plus a 
+             wide range of beneficial properties, such as being light weight, durable and flexible, alongside cheap production
+              processes has led to widespread adoption in contemporary society. Plastics typically are made through human industrial
+               systems. Most modern plastics are derived from fossil fuel based petrochemicals like natural gas or petroleum; however,
+                recent industrial methods use variants made from renewable materials such as derivatives of corn or cotton.
+           </p>
+    </div>
+
+    <div id="ink">
+        <div id="about_ink">
+            About Our Ink
+        </div>
+        <p id="ink-info">
+            Ink is a gel, sol, or solution that contains at least one colourant, such as a dye or pigment, and is used to color a 
+            surface to produce an image, text, or design. Ink is used for drawing or writing with a pen, brush, reed pen, or quill. 
+            Thicker inks, in paste form, are used extensively in letterpress and lithographic printing.
+
+Ink can be a complex medium, composed of solvents, pigments, dyes, resins, lubricants, solubilizers, surfactants, 
+particulate matter, fluorescents, and other materials. The components of inks serve many purposes; the ink's carrier, colorants,
+ and other additives affect the flow and thickness of the ink and its dry appearance.
+
+In 2011, worldwide consumption of printing inks generated revenues of more than 20 billion US dollars. Demand by traditional 
+print media is shrinking; on the other hand, more and more printing inks are consumed for packaging
+           </p>
+    </div>
+  
+
+</div>
+
+<a href="{% url 'order_page'%}">
+<button id="order_button">
+    <div id="inside_order_button">
+        PLACE AN ORDER
+    </div>
+</button>
+</a>
+
+
+
+</body>
+</html>

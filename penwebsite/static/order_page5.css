@@ -1,0 +1,116 @@
+ #header{
+    font-size: 35px;
+    background: linear-gradient(60deg,yellow,orange);
+    text-align: center ;
+    height: 60px;
+}
+
+.item_list{
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: 100px;
+    /* align-items: center; */
+    justify-content: center;
+
+
+}
+
+#inkPen,#ballPointPens,#pilotPens,#normalPens{
+
+    display: block;
+    width: 400px;
+    height: 400px;
+    padding: 30px;
+    text-align: center;
+    /* border: 0.5px solid black; */
+    margin: 10px 10px 10px 10px;
+    color:black;
+
+
+}
+
+#inkPen_img,#ballPointPens_img,#pilotPens_img{
+    display: block;
+    width:400px;
+    height: 400px;
+    /* padding: 30px; */
+    text-align: center;
+    /* border: 0.5px solid black; */
+    margin: 10px 10px 10px 10px;
+    border: none;
+}
+
+
+
+/*-------------- order selection area ----------------*/
+
+.order_placement_section{
+    display: flex;
+    height: 600px;
+}
+
+
+.dropdowns{
+    display: flex;
+    flex-direction: row;
+    /* margin: 20px 20px 20px 20px; */
+    justify-content: center;
+    text-align: center;
+}
+
+#types_of_ink_pen,#ballpen,#pilotPen{
+    margin: 20px 20px 20px 20px;
+}
+
+option{
+    text-align: center;
+}
+
+select{
+    width: 200px;
+    height: 30px;
+}
+
+label{
+    font-size: 25px;
+}
+
+/*-------------  CSS for quantity selection area    ----------------*/
+
+
+#quantity_ink_pens,#quantity_ball_pen,#quantity_pilot_pens{
+    margin-top: 30px;
+    margin-left: 50%;
+}
+
+
+#increment_ink_pen,#decrement_ink_pen,#increment_ball_pen,#decrement_ball_pen,#increment_pilot_pens,#decrement_pilot_pens{
+
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 20px;
+    background-color: black;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+
+/*********************************  CSS for input section ink pens ****************/
+
+#value_selection_ink_pen,#value_selection_ball_pen,#value_selection_pilot_pens{
+    width: 82px;
+    border: none;
+    font-size: 30px;
+    margin-top: 2px;
+}
+
+/************************   CSS for total amount of each pens orders ****************************/
+
+/*
+#test_test{
+    border: none;
+    width: 200px;
+} */

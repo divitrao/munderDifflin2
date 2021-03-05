@@ -1,0 +1,217 @@
+.header{
+font-size: 100px;
+text-align: center;
+background-color: rgba(255, 237, 99,0.4);
+position:static;
+width: 100%;
+padding: 10px;
+}
+
+.abt_us{
+
+    margin-top: 40px;
+
+    height:800px;
+    margin-bottom: 40px;
+
+
+}
+
+#about_us{
+ font-size: 50px;
+ text-align: center;
+ animation-name: appears;
+    animation-duration: 5s;
+    animation-iteration-count:1 ;
+}
+
+
+
+
+#info{
+
+    font-size: 25px;
+    margin-top: 20px;
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+    text-justify: inter-word;
+    animation-name: appears;
+    animation-duration: 5s;
+    animation-iteration-count:initial ;
+
+
+}
+
+/*------------------------------------------ #metal_related ---------------------------------------------------------------*/
+
+#about_metal{
+    font-size: 50px;
+    text-align: center;
+    animation-name: appears;
+    animation-duration: 5s;
+    animation-iteration-count:1 ;
+    color:white;
+    position: relative;
+
+
+
+}
+
+
+
+#metal-info{
+    font-size: 30px;
+    margin-top: 20px;
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+    text-justify: inter-word;
+    animation-name: appears;
+    animation-duration: 5s;
+    animation-iteration-count:initial ;
+    text-align: justify;
+    text-justify: inter-word;
+    height:800px;
+    position: relative;
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+#metal{
+    position: relative;
+
+}
+
+
+/*------------------------------------------ #plastic_related ---------------------------------------------------------------*/
+
+
+
+#about_plastic{
+    font-size: 50px;
+    text-align: center;
+    animation-name: appears;
+    animation-duration: 5s;
+    animation-iteration-count:1 ;
+    color:white;
+    position: relative;
+
+
+
+}
+
+
+
+#plastic-info{
+    font-size: 30px;
+    margin-top: 20px;
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+    text-justify: inter-word;
+    animation-name: appears;
+    animation-duration: 5s;
+    animation-iteration-count:initial ;
+    text-align: justify;
+    text-justify: inter-word;
+    height:800px;
+    position: relative;
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+#plastic{
+    position: relative;
+
+}
+
+/*-----------------------ink related --------------------------------------*/
+#about_ink{
+    font-size: 50px;
+    text-align: center;
+    animation-name: appears;
+    animation-duration: 5s;
+    animation-iteration-count:1 ;
+    color:white;
+    position: relative;
+
+
+
+}
+
+
+
+#ink-info{
+    font-size: 30px;
+    margin-top: 20px;
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+    text-justify: inter-word;
+    animation-name: appears;
+    animation-duration: 5s;
+    animation-iteration-count:initial ;
+    text-align: justify;
+    text-justify: inter-word;
+    height:800px;
+    position: relative;
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+#ink{
+    position: relative;
+
+}
+
+
+@keyframes appears{
+
+    0%{
+        transform: translateY(100px);
+        opacity: 0.1;
+        position: relative;
+    }
+
+    50%{
+
+        opacity: 0.5;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*-------------------------------------------------------order button---------------------------------------------------*/
+#inside_order_button{
+text-align: center;
+font-size: 25px;
+
+}
+
+#order_button{
+
+    width: 100%;
+    background: linear-gradient( 53deg,
+   red,
+   yellow,
+    red);
+    transition-duration: 0.5s;
+
+}
+
+#order_button:hover{
+
+    transform: scale(1.1);
+
+}

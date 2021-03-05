@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+{% load static %}
+<link href="{% static 'order_page4.css' %}" rel="stylesheet" type="text/css">
+<!-- <link rel="stylesheet" href="{% static 'javascripts/test.js' %}" type="text/javascript"> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>oeder_page</title>
+</head>
+<style>
+    #inkPen_img{
+        /* background-image: url('{% static "image\pen2.jpg" %}'); */
+        background-size: cover;
+    }
+
+     #ballPointPens_img{
+        background-image: url('{% static "image\pen4.jpg" %}');
+        background-size: cover;
+    }
+
+    #pilotPens_img{
+        background-image: url('{% static "image\pen7.png" %}');
+        background-size: cover;
+        /* background-color: black; */
+    }
+
+    /* #normalPens{
+        background-image: url('{% static "image\pen6.jpg" %}');
+        background-size: cover;
+    } */
+</style>
+<body>
+<div id="header">
+    <header>
+        Please Place Your Orders Here !! :)
+    </header>
+
+</div>
+<div>
+    you can order only in multiples of 100
+</div>
+<div class="item_list">
+    <div id="inkPen"> INK PEN <img id="inkPen_img" src="{% static 'image/pen2.jpg' %}" onmouseover="change_image('inkPen_img')"/></div>
+    <div id="ballPointPens"> BALL POINT PEN <img id="ballPointPens_img"/></div>
+    <div id="pilotPens">  PILOT PENS <img id="pilotPens_img"/>  </div>
+    <!-- <div id="normalPens"> NORMAL PENS  </div> -->
+
+</div>
+
+<form action="order_page" method="post" id="systemform">
+    {% csrf_token %}
+<div class="order_placement_section">
+
+    <div class="dropdowns">
+        <div id="types_of_ink_pen">
+            <label for="inkPens">Select Ink pen types :</label>
+            <select  id="ink_pens_value" name="inkPens" onchange="update_numbers('value_selection_ink_pen','ink_pens_value','cost_ink','increment_ink_pen','decrement_ink_pen');total_cost_func()">
+                <!-- <option  value="" hidden>select ink pens</option> -->
+                <option  value="30">  steel-plated: ₹30</option>
+                <option  value="40"> Aluminim-plates: ₹40</option>
+                <option  value="60"> stainless-steel plates: ₹60 </option>
+            </select>
+            
+            <div id="quantity_ink_pens">
+
+                <div id="value_buttons">
+                    <!-- <input name="selele" hidden > -->
+                    <input value="0" readonly="readonly" type="number" name="quatity_ink" id ="value_selection_ink_pen" form="systemform">
+                    <button  id="increment_ink_pen" onclick="increase('value_selection_ink_pen','ink_pens_value','increment_ink_pen','decrement_ink_pen','cost_ink');total_cost_func()" type="button"><strong>+</strong></button>
+                    <button disabled  id="decrement_ink_pen" onclick="decrease('value_selection_ink_pen','ink_pens_value','increment_ink_pen','decrement_ink_pen','cost_ink');total_cost_func()" type="button" ><strong>-</strong></button>
+                </div>
+                <div id="ink_pen_cost">
+                    <p> total cost of ink pens: </p>
+                    <p>₹</p><input value="0" readonly="readonly" type="number" name="costing_ink"  form="systemform"id="cost_ink">
+
+                </div>
+
+            </div>
+        </div>
+        <div id="ballpen">
+            <label for="ballpoint-pen">select ball type pen : </label>
+            <select name="ballpoint-pen"  id="ball_pens_value" onchange="update_numbers('value_selection_ball_pen','ball_pens_value','cost_ball','increment_ball_pen','decrement_ball_pen');total_cost_func()">
+                <!-- <option value="" hidden>Select ball pen</option> -->
+                <option value="100"> blue: ₹100 </option>
+                <option value="200"> black: ₹200</option>
+                <option value="300"> red: ₹300 </option>
+                <option value="400"> green: ₹400</option>
+                <option value="500"> multicolor: ₹500</option>
+            </select>
+            <div id="quantity_ball_pen">
+
+                <div id="value_buttons_ball_pen">
+                     <input value="0" readonly="readonly" type="number" name="quatity_ball"  form="systemform" id ="value_selection_ball_pen">
+                    <button id="increment_ball_pen" onclick="increase('value_selection_ball_pen','ball_pens_value','increment_ball_pen','decrement_ball_pen','cost_ball');total_cost_func()" type="button"><strong>+</strong></button>
+                    <button  disabled id="decrement_ball_pen" onclick="decrease('value_selection_ball_pen','ball_pens_value','increment_ball_pen','decrement_ball_pen','cost_ball');total_cost_func()" type="button" ><strong>-</strong></button>
+                </div>
+                <div id="ball_pen_cost">
+                    <p> total cost of ball  pens: </p>
+                    <p>₹</p><input value="0" readonly="readonly" type="number" name="costing_ball"  form="systemform"id="cost_ball">
+
+                </div>
+
+            </div>
+        </div>
+        <div id="pilotPen">
+            </select>
+            <label for="pilot-pen">select pilot-pen type : </label>
+            <select name="pilot-pen" id="pilot_pens_value" onchange="update_numbers('value_selection_pilot_pens','pilot_pens_value','cost_pilot','increment_pilot_pens','decrement_pilot_pens');total_cost_func()" >
+                <!-- <option value="" hidden>Select pilot pen</option> -->
+                <option value="120"> spong-refiel: ₹120 </option>
+                <option value="125"> ink-refiel: ₹125</option>
+                
+
+            </select>
+            <div id="quantity_pilot_pens">
+
+                <div id="value_buttons_pilot_pens">
+                     <input value="0" readonly="readonly" type="number" name="quatity_pilot"  form="systemform"  id ="value_selection_pilot_pens">
+                    <button id="increment_pilot_pens" onclick="increase('value_selection_pilot_pens','pilot_pens_value','increment_pilot_pens','decrement_pilot_pens','cost_pilot');total_cost_func()" type="button"><strong>+</strong></button>
+                    <button disabled id="decrement_pilot_pens" onclick="decrease('value_selection_pilot_pens','pilot_pens_value','increment_pilot_pens','decrement_pilot_pens','cost_pilot');total_cost_func()" type="button" ><strong>-</strong></button>
+                </div>
+                <div id="pilot_pen_cost">
+                    <p> total cost of pilot  pens: </p>
+                    <p>₹</p><input value="0" readonly="readonly" type="number" name="costing_pilot"  form="systemform"id="cost_pilot">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div class="quantity">
+
+    </div>
+
+</div>
+    <input id="sumbit_order_page" type="submit" placeholder="submit" name="submission" value="click here to check preview of the order & payments" disabled>
+</form>
+
+<!-- <div id="test_js" >
+
+    hello
+
+</div> -->
+
+<!-- <input  name="selections"  id="test_test" value="100" type="number" disabled>
+<button type="button" onclick="test_func()">press</button> -->
+<!-- <button onclick="change()" >  click to change </button> -->
+
+<script src="{% static '/javascripts/test3.js'%}" type="text/javascript"></script>
+    
+    
+
+</body>
+</html>
