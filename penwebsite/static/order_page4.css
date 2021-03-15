@@ -1,4 +1,8 @@
- #header{
+body{
+    background-color: rgba(180, 250, 199,0.5);
+}
+
+#header{
     font-size: 35px;
     background: linear-gradient(60deg,yellow,orange);
     text-align: center ;
@@ -20,7 +24,7 @@
 
     display: block;
     width: 400px;
-    height: 400px;
+    height: 500px;
     padding: 30px;
     text-align: center;
     /* border: 0.5px solid black; */
@@ -57,6 +61,7 @@
     /* margin: 20px 20px 20px 20px; */
     justify-content: center;
     text-align: center;
+    margin-top: 30px;
 }
 
 #types_of_ink_pen,#ballpen,#pilotPen{
@@ -105,6 +110,7 @@ label{
     border: none;
     font-size: 30px;
     margin-top: 2px;
+    background-color: rgba(180, 250, 199,0.5);
 }
 
 /************************   CSS for total amount of each pens orders ****************************/
@@ -124,4 +130,27 @@ label{
     background-color: orange;
     border-radius: 10px;
     text-align: center;
+    margin-bottom: 20px;
+}
+
+#sumbit_order_page:hover{
+
+    box-shadow: 7px 7px 10px 1px rgba(252, 98, 78, 0.8);;
+}
+
+/************************  inside_image_button  **************/
+
+#inside_image_button_backward_ink,#inside_image_button_forward_ink,#inside_image_button_backward_ball,#inside_image_button_forward_ball
+
+,#inside_image_button_backward_pilot,#inside_image_button_forward_pilot{
+
+    /* margin-bottom:20px; */
+    border-radius: 5px;
+    border: none;
+    width: 40px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    margin-right: 3px;
+    box-shadow: 7px 7px 10px 1px rgba(105, 92, 90, 0.8)
 }

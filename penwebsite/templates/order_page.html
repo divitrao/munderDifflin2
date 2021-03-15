@@ -15,12 +15,12 @@
     }
 
      #ballPointPens_img{
-        background-image: url('{% static "image\pen4.jpg" %}');
+        /* background-image: url('{% static "image\pen4.jpg" %}'); */
         background-size: cover;
     }
 
     #pilotPens_img{
-        background-image: url('{% static "image\pen7.png" %}');
+        /* background-image: url('{% static "image\pen7.png" %}'); */
         background-size: cover;
         /* background-color: black; */
     }
@@ -41,9 +41,9 @@
     you can order only in multiples of 100
 </div>
 <div class="item_list">
-    <div id="inkPen"> INK PEN <img id="inkPen_img" src="{% static 'image/pen2.jpg' %}" onmouseover="change_image('inkPen_img')"/></div>
-    <div id="ballPointPens"> BALL POINT PEN <img id="ballPointPens_img"/></div>
-    <div id="pilotPens">  PILOT PENS <img id="pilotPens_img"/>  </div>
+    <div id="inkPen" onmouseout="button_to_make_it_invisible('inside_image_button_backward_ink','inside_image_button_forward_ink')" onmouseover="button_to_change_image('inside_image_button_backward_ink','inside_image_button_forward_ink')"> INK PEN <img id="inkPen_img" src="{% static 'image/pen2.jpg' %}" /><div><button  style="display:none;" id="inside_image_button_backward_ink" type="button"><</button><button style="display: none;" id="inside_image_button_forward_ink" onclick="image_change()">></button></div></div>
+    <div id="ballPointPens" onmouseout="button_to_make_it_invisible('inside_image_button_backward_ball','inside_image_button_forward_ball')" onmouseover="button_to_change_image('inside_image_button_backward_ball','inside_image_button_forward_ball')"> Ball PEN  <img id="ballPointPens_img" src="{% static 'image/pen4.jpg' %}" /><div><button  style="display:none;" id="inside_image_button_backward_ball" type="button"><</button><button style="display: none;" id="inside_image_button_forward_ball">></button></div></div>
+    <div id="pilotPens" onmouseout="button_to_make_it_invisible('inside_image_button_backward_pilot','inside_image_button_forward_pilot')" onmouseover="button_to_change_image('inside_image_button_backward_pilot','inside_image_button_forward_pilot')"> PILOT PEN  <img id="ballPointPens_img" src="{% static 'image/pen7.png' %}" /><div><button  style="display:none;" id="inside_image_button_backward_pilot" type="button"><</button><button style="display: none;" id="inside_image_button_forward_pilot">></button></div></div>
     <!-- <div id="normalPens"> NORMAL PENS  </div> -->
 
 </div>

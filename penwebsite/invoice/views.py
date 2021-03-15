@@ -36,13 +36,23 @@ def orderPage(request):
         #     # print(form3)
         # if request.method=='POST':
             context = {}
-            system = request.POST.get('quatity_ink', None)
-            system1 = request.POST.get('costing_ink', None)
-            context['system'] = system
-            context['system1'] = system1
+            ink_quantity = request.POST.get('quatity_ink', None)
+            context['ink_quantity'] = ink_quantity
+            price_of_ink_pens = request.POST.get('costing_ink', None)
+            context['price_of_ink_pens'] = price_of_ink_pens
+            ballPen_quantity = request.POST.get('quatity_ball',None)
+            context['ballPen_quantity'] = ballPen_quantity
+            ballPen_price = request.POST.get('costing_ball', None)
+            context['ballPen_price'] = ballPen_price
+            pilotPen_quantity = request.POST.get('quatity_pilot',None)
+            context['pilotPen_quantity'] = pilotPen_quantity
+            pilotPen_price = request.POST.get('costing_pilot', None)
+            context['pilotPen_price'] = pilotPen_price
+
+
             def form(path):
                 my_canvas = canvas.Canvas(path,pagesize=letter)
-                my_canvas.drawString(30,750,system)
+                my_canvas.drawString(30,750,price_of_ink_pens)
                 my_canvas.save()
             form('invoices.pdf')
             # print(context[0])

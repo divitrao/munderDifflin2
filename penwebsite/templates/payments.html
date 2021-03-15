@@ -1,5 +1,7 @@
 <!doctype html>
 <html lang="en">
+ {% load static %}
+<link href="{% static 'payments.css' %}" rel="stylesheet" type="text/css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,13 +10,51 @@
     <title>Document</title>
 </head>
 <body>
-Payments  <h1>{{system}}</h1>
-cost <h1>{{system1}}</h1>
+    <div id='order_summary'>
+
+        ORDER SUMMARY AND PAYMENTS
+
+    </div>
+ <!--ink pen quantity --><input id='ink_pen_quant' class="quantity_of_pen" value="ink_pen_model_001"  hidden  placeholder={{ink_quantity}}>
+<!-- ink pen price-->  <input  id='ink_pen_price'class='price_of_pens'  hidden   placeholder= {{price_of_ink_pens}}>
+<!-- <br> -->
+<!--ball pen quantity--> <input id='ball_pen_quant' class="quantity_of_pen" value="ball_pen_model_001"  hidden placeholder={{ballPen_quantity}}>
+<!--ballpen price-->  <input id="ball_pen_price" class='price_of_pens' hidden placeholder={{ballPen_price}}>
+<!-- <br> -->
+<!--pilot pen quantity--> <input id='pilot_pen_quant' class="quantity_of_pen" value="pilot_pen_model_001" hidden placeholder={{pilotPen_quantity}}>
+<!--pilot pen price-->  <input id="pilot_pen_price" class='price_of_pens' hidden placeholder={{pilotPen_price}}>
+<!-- <br> -->
+<table id="parent_table">
+    <tr>
+        <th class="table_headers">
+            Pen type bought
+        </th>
+        <th class="table_headers">
+            Quantity bought
+        </th>
+        <th class="table_headers">
+            price per piece
+        </th>
+        <th class="table_headers">
+            Total Cost
+        </th>
+    </tr>
+    
+    <!-- <tr id="myTr">
+
+    </tr> -->
+
+</table>
+<br><br><br>
 <form method="post" action="payments">
     {% csrf_token %}
     <input type="submit" placeholder="submit">
     <input type="email" name="to_email" placeholder="enter your mail here">
     <input type="text" name="text_boxes" placeholder="enter your message here">
 </form>
+
+<!-- <script src="{% static '/javascripts/test3.js'%}" type="text/javascript"></script> -->
+
+<script src="{% static '/javascripts/paymentScript.js'%}" type="text/javascript"></script>
 </body>
 </html>

@@ -277,18 +277,27 @@ document.getElementById('sumbit_order_page').onmouseleave = function(){
 }
 
 
-function change_image(id1){
+var image_object = {
 
 
-        document.getElementById(id1).onmouseenter= function(){
-                // let source = "{% static 'image/pen4.jpg' %}"
-                document.getElementById(id1).setAttribute("src","/static/image/pen4.jpg")
-        
-        }
-
-        document.getElementById(id1).onmouseleave = function(){
-
-                document.getElementById(id1).setAttribute("src","/static/image/pen2.jpg")
-        }
+        1: "/static/image/pen3.jpg"
 }
 
+// console.log(image_object[0])
+
+function image_change(){
+
+        
+        console.log('image_object[0]')
+
+}
+function button_to_change_image(id1,id2){
+
+        document.getElementById(id1).style.display = 'inline'
+        document.getElementById(id2).style.display = 'inline'
+}
+
+function button_to_make_it_invisible(id1,id2){
+        document.getElementById(id1).style.display = 'none'
+        document.getElementById(id2).style.display = 'none'
+}
