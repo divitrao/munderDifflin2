@@ -280,17 +280,72 @@ document.getElementById('sumbit_order_page').onmouseleave = function(){
 var image_object = {
 
 
-        1: "/static/image/pen3.jpg"
+        1: 1,
+        2:2,
+        3:8
 }
 
 // console.log(image_object[0])
+let count=0
+for(key in image_object){
+        if (image_object.hasOwnProperty(key)){
+                count+=1
+        }
+}
 
-function image_change(){
+let length_of_object = count
+let button_clicked = 1
+
+document.getElementById('inside_image_button_forward_ink').onclick = function(){
+        // console.log('clicked')
+        
+        button_clicked+=1
+        // console.log(button_clicked)
+        if(button_clicked>length_of_object){
+                button_clicked=1
+                image_value = image_object[button_clicked]
+                 
+                new_source = '/static/image/pen'+String(image_value)+'.jpg'
+                document.getElementById('inkPen_img').src = new_source
+               
+
+        }
+        if (button_clicked<=length_of_object){
+                image_value = image_object[button_clicked]
+                // console.log(image_value)
+                new_source = '/static/image/pen'+String(image_value)+'.jpg'
+                document.getElementById('inkPen_img').src = new_source
+
+        }
+
+        }
+
+document.getElementById('inside_image_button_backward_ink').onclick=function(){
 
         
-        console.log('image_object[0]')
+        if(button_clicked==1){
+                button_clicked=length_of_object
+                
+                image_value = image_object[button_clicked]
+                new_source = '/static/image/pen'+String(image_value)+'.jpg'
+                document.getElementById('inkPen_img').src = new_source
 
+        }
+        else{
+
+                button_clicked = button_clicked-1
+                console.log(button_clicked)
+                image_value = image_object[button_clicked]
+                new_source = '/static/image/pen'+String(image_value)+'.jpg'
+                document.getElementById('inkPen_img').src = new_source
+        }
+        
+        
 }
+        
+        
+
+
 function button_to_change_image(id1,id2){
 
         document.getElementById(id1).style.display = 'inline'

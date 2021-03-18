@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2254bbd-d20e-4ec1-b894-83118d0a9edf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/penwebsite/invoice/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/penwebsite/invoice/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/penwebsite/invoices.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/penwebsite/invoices.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/penwebsite/static/javascripts/test3.js" beforeDir="false" afterPath="$PROJECT_DIR$/penwebsite/static/javascripts/test3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/penwebsite/static/order_page4.css" beforeDir="false" afterPath="$PROJECT_DIR$/penwebsite/static/order_page4.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/penwebsite/templates/order_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/penwebsite/templates/order_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/penwebsite/templates/payments.html" beforeDir="false" afterPath="$PROJECT_DIR$/penwebsite/templates/payments.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +29,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../practice_kinter" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="SvnConfiguration">
