@@ -313,7 +313,7 @@ function forward(id1_forward,image_id){
                 }
         }
          length_of_object = count
-                console.log('pressed')
+                // console.log('pressed')
                 // console.log('clicked')
                 
                 button_clicked+=1
@@ -343,18 +343,28 @@ function forward(id1_forward,image_id){
 
 function backward(id1_backward,image_id){
 
-        
-                // console.log(button_clicked)
+                // console.log('clicked back')
+                console.log(button_clicked)
+                // console.log(length_of_object)
+                let count=0
+                for(key in image_object[id1_backward]){
+                if (image_object[id1_backward].hasOwnProperty(key)){
+                        count+=1
+                }
+        }
+                length_of_object = count
         
                 if(button_clicked==1){
                         button_clicked=length_of_object
                         
                         image_value = image_object[id1_backward][button_clicked]
+                        
                         new_source = '/static/image/pen'+String(image_value)+'.jpg'
                         document.getElementById(image_id).src = new_source
         
                 }
                 else{
+                        console.log(button_clicked)
         
                         button_clicked = button_clicked-1
                         // console.log(button_clicked)

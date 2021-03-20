@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2254bbd-d20e-4ec1-b894-83118d0a9edf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/penwebsite/invoices.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/penwebsite/invoices.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/penwebsite/static/javascripts/test3.js" beforeDir="false" afterPath="$PROJECT_DIR$/penwebsite/static/javascripts/test3.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
