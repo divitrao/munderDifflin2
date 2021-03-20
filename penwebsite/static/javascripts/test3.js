@@ -279,69 +279,96 @@ document.getElementById('sumbit_order_page').onmouseleave = function(){
 
 var image_object = {
 
-
+'inside_image_button_forward_ink':{
         1: 1,
         2:2,
         3:8
+
+},
+
+'inside_image_button_forward_ball':{
+        1:4,
+        2:3,
+        3:6
+},
+'inside_image_button_forward_pilot':{
+        1:5,
+        2:9
+}
+       
 }
 
 // console.log(image_object[0])
-let count=0
-for(key in image_object){
-        if (image_object.hasOwnProperty(key)){
-                count+=1
-        }
-}
 
-let length_of_object = count
+
+
+
 let button_clicked = 1
-
-document.getElementById('inside_image_button_forward_ink').onclick = function(){
-        // console.log('clicked')
-        
-        button_clicked+=1
-        // console.log(button_clicked)
-        if(button_clicked>length_of_object){
-                button_clicked=1
-                image_value = image_object[button_clicked]
-                 
-                new_source = '/static/image/pen'+String(image_value)+'.jpg'
-                document.getElementById('inkPen_img').src = new_source
-               
-
+let length_of_object
+function forward(id1_forward,image_id){
+        let count=0
+        for(key in image_object[id1_forward]){
+                if (image_object[id1_forward].hasOwnProperty(key)){
+                        count+=1
+                }
         }
-        if (button_clicked<=length_of_object){
-                image_value = image_object[button_clicked]
-                // console.log(image_value)
-                new_source = '/static/image/pen'+String(image_value)+'.jpg'
-                document.getElementById('inkPen_img').src = new_source
-
-        }
-
-        }
-
-document.getElementById('inside_image_button_backward_ink').onclick=function(){
-
-        
-        if(button_clicked==1){
-                button_clicked=length_of_object
+         length_of_object = count
+                console.log('pressed')
+                // console.log('clicked')
                 
-                image_value = image_object[button_clicked]
-                new_source = '/static/image/pen'+String(image_value)+'.jpg'
-                document.getElementById('inkPen_img').src = new_source
-
-        }
-        else{
-
-                button_clicked = button_clicked-1
-                console.log(button_clicked)
-                image_value = image_object[button_clicked]
-                new_source = '/static/image/pen'+String(image_value)+'.jpg'
-                document.getElementById('inkPen_img').src = new_source
-        }
+                button_clicked+=1
+                // console.log(button_clicked)
+                // console.log(length_of_object)
+                if(button_clicked>length_of_object){
+                        button_clicked=1
+                        image_value = image_object[id1_forward][button_clicked]
+                         
+                        new_source = '/static/image/pen'+String(image_value)+'.jpg'
+                        document.getElementById(image_id).src = new_source
+                       
         
+                }
+                else if (button_clicked<=length_of_object)
+                {
+                        image_value = image_object[id1_forward][button_clicked]
+                        // console.log(image_value)
+                        new_source = '/static/image/pen'+String(image_value)+'.jpg'
+                        document.getElementById(image_id).src = new_source
         
+                }
+        
+                
+
 }
+
+function backward(id1_backward,image_id){
+
+        
+                // console.log(button_clicked)
+        
+                if(button_clicked==1){
+                        button_clicked=length_of_object
+                        
+                        image_value = image_object[id1_backward][button_clicked]
+                        new_source = '/static/image/pen'+String(image_value)+'.jpg'
+                        document.getElementById(image_id).src = new_source
+        
+                }
+                else{
+        
+                        button_clicked = button_clicked-1
+                        // console.log(button_clicked)
+                        image_value = image_object[id1_backward][button_clicked]
+                        new_source = '/static/image/pen'+String(image_value)+'.jpg'
+                        document.getElementById(image_id).src = new_source
+                }
+                
+                
+        
+
+}
+
+
         
         
 

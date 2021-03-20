@@ -16,7 +16,7 @@
 
     </div>
  <!--ink pen quantity --><input id='ink_pen_quant' class="quantity_of_pen" value="ink_pen_model_001"  hidden  placeholder={{ink_quantity}}>
-<!-- ink pen price-->  <input  id='ink_pen_price'class='price_of_pens'  hidden   placeholder= {{price_of_ink_pens}}>
+<!-- ink pen price-->  <input  id='ink_pen_price'class='price_of_pens'     hidden    placeholder= {{price_of_ink_pens}}>
 <!-- <br> -->
 <!--ball pen quantity--> <input id='ball_pen_quant' class="quantity_of_pen" value="ball_pen_model_001"  hidden placeholder={{ballPen_quantity}}>
 <!--ballpen price-->  <input id="ball_pen_price" class='price_of_pens' hidden placeholder={{ballPen_price}}>
@@ -33,10 +33,10 @@
             Quantity bought
         </th>
         <th class="table_headers">
-            price per piece
+            price per piece in ₹
         </th>
         <th class="table_headers">
-            Total Cost
+            Total Cost in ₹
         </th>
     </tr>
     
@@ -45,6 +45,10 @@
     </tr> -->
 
 </table>
+<br><br><br>
+
+<div id="Total_price">  </div>
+
 <br><br><br>
 <form method="post" action="payments">
     {% csrf_token %}

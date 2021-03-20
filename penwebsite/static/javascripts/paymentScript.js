@@ -63,4 +63,13 @@ for (i=0;i<inner_price.length;i++){
     }
 }
 
+
+
 document.getElementById('parent_table').style.textAlign='center'
+let sum_of_cost=0
+for(i=0;i<inner_price.length;i++){
+    sum_of_cost=sum_of_cost+parseInt(inner_price[i].placeholder)
+}
+
+document.getElementById('Total_price').innerHTML='Grand Total is : ₹'+(sum_of_cost).toString()
+console.log(sum_of_cost)
