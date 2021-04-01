@@ -16,7 +16,7 @@ for (i=0;i<inner_price.length;i++){
             
             if(j==0){
                 var type_bought =  inner_pen_quantity[i].value
-                var appending_type = document.createTextNode(type_bought)
+                var appending_type =  document.createTextNode(type_bought)
                 table_data.appendChild(appending_type)
                 
                 document.getElementById(dynamic_id).appendChild(table_data)
@@ -34,8 +34,8 @@ for (i=0;i<inner_price.length;i++){
                 // document.getElementById(dynamic_data_id).style.textAlign = 'center'
             }
             else if(j==2){
-                var total_cost = inner_price[i].placeholder
-                var cost_per_pice =total_cost/inner_pen_quantity[i].placeholder
+                var total_cost =   inner_price[i].placeholder
+                var cost_per_pice ='₹ ' + total_cost/inner_pen_quantity[i].placeholder.toString()
                 var appending_type = document.createTextNode(cost_per_pice)
                 table_data.appendChild(appending_type)
                 
@@ -45,8 +45,8 @@ for (i=0;i<inner_price.length;i++){
 
             else{
 
-                var total_cost = inner_price[i].placeholder
-                var appending_type = document.createTextNode(total_cost)
+                var total_cost ='₹ ' +  inner_price[i].placeholder.toString()
+                var appending_type =  document.createTextNode(total_cost)
                 table_data.appendChild(appending_type)
                 
                 document.getElementById(dynamic_id).appendChild(table_data)
@@ -71,5 +71,5 @@ for(i=0;i<inner_price.length;i++){
     sum_of_cost=sum_of_cost+parseInt(inner_price[i].placeholder)
 }
 
-document.getElementById('Total_price').innerHTML='Grand Total is : ₹'+(sum_of_cost).toString()
+document.getElementById('Total_price').innerHTML='Grand Total is : ₹ '+(sum_of_cost).toString()
 console.log(sum_of_cost)
