@@ -3,6 +3,8 @@
  {% load static %}
 <link href="{% static 'payments.css' %}" rel="stylesheet" type="text/css">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -48,6 +50,26 @@
 <div id="Total_price">  </div>
 
 <br><br><br>
+
+<div id="payment_method">
+
+    <!-- <p id="credit_card" onclick="show_func()"> Credit Card</p>
+    <div  id="credit_details" > hello </div> -->
+
+    <h3>Credit Card </h3>
+    <div id="card_details"> 
+        <input id="card_input_field" placeholder="dummy name on card" >
+        <input id="card_input_field_number" placeholder="dummy card number">
+    </div>
+    <h3>Debit Card </h3>
+    <div id="card_details"> 
+        <input id="card_input_field" placeholder="dummy name on card" >
+        <input id="card_input_field_number" placeholder="dummy card number">
+    </div>
+
+</div>
+
+
 <form method="post" action="payments">
     {% csrf_token %}
     <input type="submit" placeholder="submit">

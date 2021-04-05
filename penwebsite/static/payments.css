@@ -26,3 +26,18 @@ table,th,td{
     border: 1px solid black;
     padding: 30px;
 }
+
+#payment_method{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: center;
+}
+
+#card_input_field,#card_input_field_number{
+
+    height: 20px;
+    padding: 10px;
+    margin-top: 10px;
+}

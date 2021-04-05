@@ -1,4 +1,6 @@
-var inner_price = document.getElementsByClassName('price_of_pens')
+$(document).ready(function(){
+
+    var inner_price = document.getElementsByClassName('price_of_pens')
 var inner_pen_quantity = document.getElementsByClassName('quantity_of_pen')
 var inner_table_header = document.getElementsByClassName('table_headers')
 
@@ -73,3 +75,35 @@ for(i=0;i<inner_price.length;i++){
 
 document.getElementById('Total_price').innerHTML='Grand Total is : ₹ '+(sum_of_cost).toString()
 console.log(sum_of_cost)
+
+// document.getElementById("credit_details").style.visibility = 'hidden'
+
+// function show_func(){
+//     document.getElementById("credit_details").style.visibility = 'visible'
+// }
+
+$("#payment_method").accordion() 
+
+$("#card_input_field_number").keyup(function(){
+   var input_val= ($("#card_input_field_number").val())
+//    console.log(input_val)
+//    if(parseInt(input_val)>=0 )
+//    {
+//        console.log("int wala ",parseInt(input_val))
+//    }
+   {
+       var input_val = $("#card_input_field_number").val()
+    //    console.log("hi",input_val)
+       input_val = input_val.replace(/[a-zA-Z]+/g,'');
+       $("#card_input_field_number").val(input_val) 
+       console.log(input_val.length)
+       if(input_val.length==4 || input_val.length==9 || input_val.length==14  ){
+        $("#card_input_field_number").val( $("#card_input_field_number").val() + "-") 
+        $("#card_input_field_number").attr("maxlength","19")
+       }
+
+   }
+})
+
+})
+ 
