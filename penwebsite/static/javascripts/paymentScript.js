@@ -94,7 +94,7 @@ $("#card_input_field_number").keyup(function(){
    {
        var input_val = $("#card_input_field_number").val()
     //    console.log("hi",input_val)
-       input_val = input_val.replace(/[a-zA-Z]+/g,'');
+       input_val = input_val.replace(/[a-zA-Z@!#$%^&*()+_-|\/><:";,.'~`?]+/g,'');
        $("#card_input_field_number").val(input_val) 
        console.log(input_val.length)
        if(input_val.length==4 || input_val.length==9 || input_val.length==14  ){

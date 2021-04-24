@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from django.core.mail import  send_mail,EmailMessage
-from reportlab.pdfgen import canvas
-from reportlab.lib.pagesizes import letter
-
+# from reportlab.pdfgen import canvas
+# from reportlab.lib.pagesizes import letter
+from reportlab.pdfgen import  canvas
+from reportlab.lib.pagesizes import  letter
 
 
 def home(request):
@@ -52,7 +53,12 @@ def orderPage(request):
 
             def form(path):
                 my_canvas = canvas.Canvas(path,pagesize=letter)
-                my_canvas.drawString(30,750,price_of_ink_pens)
+                # my_canvas.drawString(30,750,price_of_ink_pens)
+                my_canvas.drawImage('logo.jpg',20,680,width=100,height=100)
+                my_canvas.setFont('Helvetica',30)
+                my_canvas.drawString(145,750,"DUNDER DIFFLIN pen corp. LTD.")
+                my_canvas.setFont('Helvetica',30)
+                my_canvas.drawString(180,650,"Products Bought from us")
                 my_canvas.save()
             form('invoices.pdf')
             # print(context[0])
