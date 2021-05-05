@@ -85,6 +85,8 @@ def orderPage(request):
                 if int(pilotPen_quantity)>0:
                     data.append(['pilot_pen_model_001',pilotPen_quantity,int(pilotPen_price)/int(pilotPen_quantity),pilotPen_price])
 
+
+                total_price_of_buyed_product = '₹'+ str(int(price_of_ink_pens) + int(ballPen_price) + int(pilotPen_price))
                 tableStyle = TableStyle([
                     ('ALIGN', (0, 0), (-1, -1), "CENTER"),
                     ('FONTSIZE', (0, 0), (-1, -1), 13),
@@ -95,7 +97,9 @@ def orderPage(request):
                 tb1 = Table(data)
                 tb1.setStyle(tableStyle)
                 tb1.wrapOn(my_canvas,100,200)
-                tb1.drawOn(my_canvas,150,500)
+                tb1.drawOn(my_canvas,100,500)
+                my_canvas.drawString(180,400,'total price is ')
+                my_canvas.drawString(400,400,total_price_of_buyed_product)
                 # flowables.append(tb1)
                 # doc.build(flowables)
 
