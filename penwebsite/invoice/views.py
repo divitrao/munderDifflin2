@@ -8,6 +8,7 @@ from reportlab.platypus import  Table , SimpleDocTemplate , TableStyle
 import  os
 from pathlib import  Path
 BASE_DIR = Path(__file__).resolve().parent.parent
+from .models import content
 
 
 def home(request):
@@ -118,6 +119,7 @@ def orderPage(request):
 
 
     else:
+        print(os.getcwd())
         return render(request,'order_page.html')
 def payments(request):
     if request.method == 'POST':
@@ -165,3 +167,34 @@ def payments(request):
         return render(request,'payments.html')
 
 
+def order_page2(request):
+    # pen1 = content()
+    # pen1.pen_price = 10
+    # pen1.pen_name="pilot"
+    # pen1.img="pen1.jpg"
+    #
+    # pen2 = content()
+    # pen2.pen_price = 100
+    # pen2.pen_name = "ink"
+    # pen2.img = "pen2.jpg"
+    #
+    # pen3= content()
+    # pen3.pen_price = 1000
+    # pen3.pen_name = "ball"
+    # pen3.img = "pen3.jpg"
+    #
+    # pen4 = content()
+    # pen4.pen_price = 1000
+    # pen4.pen_name = "ball"
+    # pen4.img = "pen3.jpg"
+    #
+    # pen5 = content()
+    # pen5.pen_price = 1000
+    # pen5.pen_name = "ball"
+    # pen5.img = "pen5.jpg"
+    #
+    # contents = [pen1,pen2,pen3,pen4,pen5]
+
+    contents = content.objects.all()
+
+    return render(request,'order_page2.html',{'contents':contents})

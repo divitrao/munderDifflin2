@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+{% static "image" as base_url %} 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'order_page2.css' %}" >
+</head>
+<body>
+    <h1>hi</h1>
+    <div class="outer-content-box">
+    {% for conts in contents %}
+    <div class="content-box" >
+    <div class="image_class">
+        <!-- <img src="{{base_url}}/{{conts.img}}" id="images"> -->
+        <img src="{{conts.img.url}}" id="images">
+    </div>
+    <div class="name_pen">{{conts.pen_name}}</div>
+    <div class="pen_price"> {{conts.pen_price}}</div>
+    </div>
+    {% endfor %}
+</div>
+</body>
+</html>
