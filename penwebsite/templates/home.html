@@ -69,7 +69,16 @@
 } */
 </style>
 <body>
-
+{% if user.is_authenticated %}
+<h3>hello {{user.first_name}} {{user.last_name}}</h3>
+<a href="{% url 'logout'  %}">LOGOUT</a>
+{% else %}
+<div class="login">
+    <a href= '/accounts/login'>
+        Signup/Register
+    </a>
+</div>
+{% endif %}
 <div class="header">
     penDev Inc
 </div>
@@ -153,13 +162,19 @@ print media is shrinking; on the other hand, more and more printing inks are con
 
 </div>
 
-<a href="{% url 'order_page'%}">
-<button id="order_button">
+
+
+    <a href="{% url 'order_page'%}">
+<button id="order_button" type="submit">
     <div id="inside_order_button">
         PLACE AN ORDER
     </div>
 </button>
 </a>
+
+
+
+
 
 
 

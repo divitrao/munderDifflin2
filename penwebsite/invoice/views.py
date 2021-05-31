@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.core.mail import  send_mail,EmailMessage
 # from reportlab.pdfgen import canvas
 # from reportlab.lib.pagesizes import letter
@@ -9,9 +9,15 @@ import  os
 from pathlib import  Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 from .models import content
+from django.contrib.auth.models import  User,auth
 
 
 def home(request):
+    if request.method == 'POST':
+        if request.user.is_authenticated():
+            return render(request,'order_page.html')
+        else:
+            return redirect('/accounts/login')
     # if request.method == 'POST':
     #     to_email = request.POST.get('to_email')
     #     messages = request.POST.get('text_boxes')
@@ -20,6 +26,7 @@ def home(request):
     #         messages,
     #         'divitrao97d@gmail.com',  # from_email
     #         [to_email]  # to email
+    #
     #
     #     )
     #
@@ -119,8 +126,16 @@ def orderPage(request):
 
 
     else:
-        print(os.getcwd())
-        return render(request,'order_page.html')
+        user = auth.authenticate(request)
+        if request.user.is_authenticated:
+            return render(request,'order_page.html')
+        else:
+            return redirect('/accounts/login')
+        # print(os.getcwd())
+    # else:
+    #     user = auth.authenticate(request)
+    #     print('it is aunthenticated ',request.user.is_authenticated)
+    #     return render(request,'order_page.html')
 def payments(request):
     if request.method == 'POST':
         to_email = request.POST.get('to_email')
