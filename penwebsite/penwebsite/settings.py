@@ -32,13 +32,14 @@ ALLOWED_HOSTS = ['192.168.0.103','127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
-    'invoice.apps.InvoiceConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'invoice.apps.InvoiceConfig',
+    'accounts.apps.AccountsConfig'
 ]
 
 MIDDLEWARE = [
